@@ -1,5 +1,12 @@
 var currentDate = new Date().toLocaleTimeString();
 
+//clear memory
+for (let name in Memory.creeps) {
+  if (Game.creeps[name] == undefined) {
+    delete Memory.creeps[name];
+  }
+}
+
 console.log("top of main: ", currentDate);
 
 function spawnHarvester() {
