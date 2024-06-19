@@ -1,3 +1,5 @@
+var roleHarvester = require("role.harvester");
+var roleUpgrader = require("role.upgrader");
 var currentDate = new Date().toLocaleTimeString();
 
 console.log("top of main: ", currentDate);
@@ -42,7 +44,7 @@ function spawnHarvester() {
 function spawnUpgrader() {
   console.log("creating Upgrader");
   var name = Game.spawns.Spawn1.spawnCreep(
-    [WORK, WORK, CARRY, MOVE],
+    [WORK, CARRY, MOVE, MOVE],
     undefined,
     {
       role: "upgrader",
